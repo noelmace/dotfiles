@@ -8,6 +8,10 @@ Just clone this repository (or a fork) in your home directory, and use [GNU Stow
 
 `stow <file or folder>`
 
+## Sub-projects
+
+- [Spaceship Angular Prompt](./zsh/.zshrc.d/spaceship-angular-prompt)
+
 ## Tools
 
 ### Hyper.js
@@ -17,3 +21,28 @@ A terminal built on web technologies
 | :octocat: **repo** | :bookmark: **website** | :arrow_down: **Install** |
 |--------------------|---------------------------|----------------------------|
 | [zeit/hyper](https://github.com/zeit/hyper)| [hyper.is](https://hyper.is/) | `aurman -S hyper` |
+
+### VS Code
+
+Code editing.\
+**Redefined.**
+
+| :octocat: **repo** | :bookmark: **website** | :arrow_down: **Install** |
+|--------------------|---------------------------|----------------------------|
+| [Microsoft/vscode](https://github.com/Microsoft/vscode)| [code.visualstudio.com](https://code.visualstudio.com) | `aurman -S hyper` |
+
+## Oh My ZSH
+
+Open source, community-driven framework for managing your zsh configuration.
+
+:electric_plug: Submodule in [/zsh](./zsh/)
+
+## Spaceship ZSH
+
+:rocket: :star: A Zsh prompt for Astronauts
+
+:electric_plug: Submodule in [/zsh/.zsh-custom/themes/](./zsh/.zsh-custom/themes/)
+
+## Misc
+
+See this repository [submodules](./.gitmodules).
