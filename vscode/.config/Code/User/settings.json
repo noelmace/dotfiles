@@ -1,0 +1,26 @@
+{
+  "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "editor.formatOnSave": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.mouseWheelZoom": true,
+  "window.menuBarVisibility": "default",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 140,
+  "prettier.tabWidth": 4,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+  "editor.cursorBlinking": "phase",
+  "window.zoomLevel": 0,
+  "explorer.confirmDragAndDrop": false
+}
