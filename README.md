@@ -18,8 +18,8 @@ Just clone this repository (or a fork) in your home directory, and use [GNU Stow
 
 A terminal built on web technologies
 
-| :octocat: **repo** | :bookmark: **website** | :arrow_down: **Install** |
-|--------------------|---------------------------|----------------------------|
+| :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
+|----------------|---------------------------------|------------------------|
 | [zeit/hyper](https://github.com/zeit/hyper)| [hyper.is](https://hyper.is/) | `aurman -S hyper` |
 
 ### VS Code
@@ -27,9 +27,9 @@ A terminal built on web technologies
 Code editing.\
 **Redefined.**
 
-| :octocat: **repo** | :bookmark: **website** | :arrow_down: **Install** |
-|--------------------|---------------------------|----------------------------|
-| [Microsoft/vscode](https://github.com/Microsoft/vscode)| [code.visualstudio.com](https://code.visualstudio.com) | `aurman -S hyper` |
+| :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
+|----------------|---------------------------------|------------------------|
+| [Microsoft/vscode](https://github.com/Microsoft/vscode)| [code.visualstudio.com](https://code.visualstudio.com) | :books: [setup overview](https://code.visualstudio.com/docs/setup/setup-overview) |
 
 ## Oh My ZSH
 
