@@ -43,6 +43,14 @@ Open source, community-driven framework for managing your zsh configuration.
 
 :electric_plug: Submodule in [/zsh/.zsh-custom/themes/](./zsh/.zsh-custom/themes/)
 
+## Hub
+
+A command-line tool that makes git easier to use with GitHub.
+
+| :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
+|----------------|---------------------------------|------------------------|
+| [github/hub](https://github.com/github/hub)| [hub.github.com](https://hub.github.com/) | `$ sudo pacman -S hub` |
+
 ## Misc
 
 See this repository [submodules](./.gitmodules).
