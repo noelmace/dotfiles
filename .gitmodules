@@ -10,3 +10,6 @@
 [submodule "zsh/.zsh-custom/plugins/zsh-autosuggestions"]
 	path = zsh/.zsh-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "awesome/.config/awesome/battery-widget"]
+	path = awesome/.config/awesome/battery-widget
+	url = https://github.com/deficient/battery-widget.git
