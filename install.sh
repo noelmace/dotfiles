@@ -45,3 +45,6 @@ alsamixer
 
 # configure WiFi 
 sudo wifi-menu
+
+# check installed packages
+grep -i installed /var/log/pacman.log
