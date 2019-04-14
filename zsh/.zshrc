@@ -218,3 +218,6 @@ alias xx="asciinema play"
 alias netflix="google-chrome-beta --app=https://www.netflix.com/"
 alias youtube="google-chrome-beta --app=https://www.youtube.com/"
 alias npmp="npx install-peerdeps"
+
+source /usr/share/nvm/init-nvm.sh
+source /etc/profile.d/autojump.bash
