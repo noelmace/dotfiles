@@ -13,3 +13,15 @@
 [submodule "awesome/.config/awesome/battery-widget"]
 	path = awesome/.config/awesome/battery-widget
 	url = https://github.com/deficient/battery-widget.git
+[submodule "aur/google-chrome-dev"]
+	path = aur/google-chrome-dev
+	url = https://aur.archlinux.org/google-chrome-dev.git
+[submodule "aur/all-repository-fonts"]
+	path = aur/all-repository-fonts
+	url = https://aur.archlinux.org/all-repository-fonts.git
+[submodule "aur/nvm"]
+	path = aur/nvm
+	url = https://aur.archlinux.org/nvm.git
+[submodule "aur/hyper"]
+	path = aur/hyper
+	url = git@github.com:noelmace/aur-hyper.git
