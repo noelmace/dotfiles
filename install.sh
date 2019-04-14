@@ -17,9 +17,19 @@ sudo pacman -S libicns graphicsmagick xz yarn
 # Sound
 sudo pacman -S alsa-utils playerctl
 # LightDM 
-sudo pacman -S lightdm lightdm-gtk-greeter
+sudo pacman -S lightdm
+# sudo pacman -S python-whither python-gobject python-pyqt5 zip # v3 broken
+sudo pacman -S gtk3 webkit2gtk dbus-glib meson
 # VS Code
 sudo pacman -S code
+
+# LightDM Web Greeter
+## FIXME: https://github.com/Antergos/web-greeter/issues/164
+## https://github.com/Antergos/web-greeter/issues/108
+cd tools/lightdm-web-greeter/build
+meson --prefix=/usr --libdir=lib ..
+ninja
+sudo ninja install
 
 ## system config
 

@@ -25,3 +25,6 @@
 [submodule "aur/hyper"]
 	path = aur/hyper
 	url = git@github.com:noelmace/aur-hyper.git
+[submodule "tools/lightdm-web-greeter"]
+	path = tools/lightdm-web-greeter
+	url = git@github.com:Antergos/web-greeter.git
