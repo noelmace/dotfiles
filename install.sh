@@ -9,7 +9,7 @@ sudo pacman -S awesome xbacklight xorg-xmodmap
 # CLI utils
 sudo pacman -S xclip hub openssh vim sudo stow zsh autojump physlock
 # WiFi
-sudo pacman -S wpa_supplicant dialog iw elink
+sudo pacman -S wpa_supplicant dialog iw elinks
 # Fonts
 sudo pacman -S powerline-fonts otf-fira-code noto-fonts-emoji
 # HyperJS
@@ -29,6 +29,11 @@ sudo ln -sf $PWD/etc/X11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/
 sudo ln -sf $PWD/etc/locale.conf /etc/
 sudo ln -sf $PWD/etc/lightdm/lightdm.conf /etc/lightdm
 
+## Services
+
+sudo systemctl enable netctl-auto@interface.service
+sudo systemctl enable lightdm.service
+
 ## link user dotfiles
 # this project should be clones in $HOME/dotfiles
 
@@ -46,5 +51,6 @@ alsamixer
 sudo wifi-menu
 # check installed packages
 grep -i installed /var/log/pacman.log
+
 # screen locker
-physlock
+# physlock
