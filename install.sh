@@ -7,7 +7,7 @@ sudo pacman -Sy
 # X Window System
 sudo pacman -S awesome xbacklight xorg-xmodmap
 # CLI utils
-sudo pacman -S xclip hub openssh vim sudo stow zsh autojump
+sudo pacman -S xclip hub openssh vim sudo stow zsh autojump physlock
 # WiFi
 sudo pacman -S wpa_supplicant dialog iw elink
 # Fonts
@@ -42,9 +42,9 @@ stow zsh
 
 # unmute master with 'm' key
 alsamixer
-
 # configure WiFi 
 sudo wifi-menu
-
 # check installed packages
 grep -i installed /var/log/pacman.log
+# screen locker
+physlock
