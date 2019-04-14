@@ -29,7 +29,7 @@ Code editing.\
 
 | :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
 |----------------|---------------------------------|------------------------|
-| [Microsoft/vscode](https://github.com/Microsoft/vscode)| [code.visualstudio.com](https://code.visualstudio.com) | :books: [setup overview](https://code.visualstudio.com/docs/setup/setup-overview) |
+| [Microsoft/vscode](https://github.com/Microsoft/vscode)| [code.visualstudio.com](https://code.visualstudio.com) | `pacman -S code` |
 
 ## Oh My ZSH
 
