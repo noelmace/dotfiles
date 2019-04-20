@@ -1,8 +1,13 @@
-# Just some notes for myself - not testing directly
+### Just some notes for myself
+### DON'T RUN this without modifications
+exit 1
 
 ## Packages
 
 sudo pacman -Sy
+
+## packages list: see packages.dsv
+pacman -Qent --info
 
 # X Window System
 sudo pacman -S awesome xbacklight xorg-xmodmap
@@ -20,6 +25,8 @@ sudo pacman -S alsa-utils playerctl
 sudo pacman -S lightdm lightdm-gtk-greeter
 # VS Code
 sudo pacman -S code
+# Bluetooth
+sudo pacman -S bluez bluez-utils
 
 ## system config
 
@@ -32,6 +39,8 @@ sudo ln -sf $PWD/etc/lightdm/lightdm.conf /etc/lightdm
 ## Services
 
 sudo systemctl enable netctl-auto@interface.service
+# enable a profile (in /etc/netctl/, maybe create with wifi-menu) to start at boot 
+# sudo netctl enable my-profile 
 sudo systemctl enable lightdm.service
 
 ## link user dotfiles
@@ -52,5 +61,17 @@ sudo wifi-menu
 # check installed packages
 grep -i installed /var/log/pacman.log
 
-# screen locker
+### Misc
+
+## screen locker
 # physlock
+
+## shutdown
+## FIXME: shutdown hangs when using lightdm or shutdown command
+# sudo systemctl poweroff
+
+## reboot
+# sudo systemctl reboot
+
+## bluetooth config - interactive
+# bluetoothctl
