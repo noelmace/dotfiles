@@ -542,6 +542,15 @@ globalkeys =
       menubar.show()
     end,
     {description = "show the menubar", group = "launcher"}
+  ),
+  -- Lock Screen
+  awful.key(
+    {modkey},
+    "l",
+    function()
+      awful.util.spawn("physlock")
+    end,
+    {description = "lock screen", group = "actions"}
   )
 )
 
