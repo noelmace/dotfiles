@@ -25,6 +25,6 @@
 [submodule "aur/hyper"]
 	path = aur/hyper
 	url = git@github.com:noelmace/aur-hyper.git
-[submodule "awesome/.config/awesome/net_wigets"]
-	path = awesome/.config/awesome/net_wigets
+[submodule "awesome/.config/awesome/net_widgets"]
+	path = awesome/.config/awesome/net_widgets
 	url = git@github.com:pltanton/net_widgets.git
