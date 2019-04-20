@@ -18,6 +18,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+local net_widgets = require("net_widgets")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -108,6 +110,9 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+-- Network widget
+net_wireless = net_widgets.wireless({interface="wlp2s0", popup_signal=true})
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -212,7 +217,8 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-	    require("battery-widget") {},
+            net_wireless,
+	        require("battery-widget") {},
             mytextclock,
             s.mylayoutbox,
         },
