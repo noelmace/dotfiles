@@ -28,6 +28,9 @@ sudo pacman -S code
 # Bluetooth
 sudo pacman -S bluez bluez-utils
 
+# don't install yarn with pacman as it would install nodejs
+curl -o- -L https://yarnpkg.com/install.sh | bash
+
 ## system config
 
 sudo ln -sf $PWD/etc/fonts/conf.avail/75-noto-color-emoji.conf /etc/fonts/conf.d/

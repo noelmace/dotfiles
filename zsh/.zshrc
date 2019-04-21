@@ -20,6 +20,9 @@ ZSH_THEME="spaceship"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # github/hub tool
 eval "$(hub alias -s)"
 GITHUB_USER="noelmace"
@@ -211,12 +214,13 @@ else
 fi
 
 DEBUG_NODE="node --max_old_space_size=8192 --inspect-brk"
+alias chrome="google-chrome-unstable"
 alias dnode="$DEBUG_NODE"
 alias dngg="$DEBUG_NODe $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
 alias xx="asciinema play"
-alias netflix="google-chrome-beta --app=https://www.netflix.com/"
-alias youtube="google-chrome-beta --app=https://www.youtube.com/"
+alias netflix="chrome --app=https://www.netflix.com/"
+alias youtube="chrome --app=https://www.youtube.com/"
 alias npmp="npx install-peerdeps"
 
 source /usr/share/nvm/init-nvm.sh
