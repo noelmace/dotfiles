@@ -4,7 +4,7 @@
 
 const isDemo = false;
 
-const plugins = [];
+const plugins = ['hyperminimal'];
 
 if (isDemo) {
   plugins.push('hyper-one-light');
