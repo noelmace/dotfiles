@@ -9,7 +9,7 @@
   "editor.formatOnSave": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.mouseWheelZoom": true,
-  "window.menuBarVisibility": "default",
+  "window.menuBarVisibility": "toggle",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
@@ -22,5 +22,6 @@
   "editor.fontWeight": "500",
   "editor.cursorBlinking": "phase",
   "window.zoomLevel": 0,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "editor.minimap.enabled": true
 }
