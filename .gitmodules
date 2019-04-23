@@ -31,3 +31,6 @@
 [submodule "awesome/.config/awesome/freedesktop"]
 	path = awesome/.config/awesome/freedesktop
 	url = git@github.com:lcpz/awesome-freedesktop.git
+[submodule "aur/vscode"]
+	path = aur/vscode
+	url = https://aur.archlinux.org/visual-studio-code-bin.git

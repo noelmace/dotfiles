@@ -23,5 +23,6 @@
   "editor.cursorBlinking": "phase",
   "window.zoomLevel": 0,
   "explorer.confirmDragAndDrop": false,
-  "editor.minimap.enabled": true
+  "editor.minimap.enabled": true,
+  "workbench.iconTheme": "material-icon-theme"
 }

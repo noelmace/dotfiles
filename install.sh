@@ -78,3 +78,7 @@ grep -i installed /var/log/pacman.log
 
 ## bluetooth config - interactive
 # bluetoothctl
+
+## run awesome in a nested X server for tests
+## ctrl+shift to capture keyboard and mouse
+# Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome
