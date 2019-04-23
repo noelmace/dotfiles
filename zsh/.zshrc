@@ -220,7 +220,6 @@ alias dngg="$DEBUG_NODe $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
 alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
-alias youtube="chrome --app=https://www.youtube.com/"
 alias npmp="npx install-peerdeps"
 
 source /usr/share/nvm/init-nvm.sh

@@ -15,7 +15,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
 local lain = require("lain")
---local menubar       = require("menubar")
 local freedesktop = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 require("awful.hotkeys_popup.keys")
@@ -107,18 +106,18 @@ local guieditor = "code"
 local scrlocker = "physlock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = {"1", "2", "3", "4", "5"}
+awful.util.tagnames = {"1", "2", "3"}
 awful.layout.layouts = {
   awful.layout.suit.floating,
   awful.layout.suit.tile,
   awful.layout.suit.tile.left,
   awful.layout.suit.tile.bottom,
-  awful.layout.suit.tile.top
-  --awful.layout.suit.fair,
+  awful.layout.suit.tile.top,
+  awful.layout.suit.max,
+  awful.layout.suit.fair
   --awful.layout.suit.fair.horizontal,
   --awful.layout.suit.spiral,
   --awful.layout.suit.spiral.dwindle,
-  --awful.layout.suit.max,
   --awful.layout.suit.max.fullscreen,
   --awful.layout.suit.magnifier,
   --awful.layout.suit.corner.nw,
@@ -255,15 +254,21 @@ beautiful.init(string.format("%s/.config/awesome/copycats/themes/%s/theme.lua", 
 
 -- {{{ Menu
 local myawesomemenu = {
-  {"hotkeys", function()
+  {
+    "hotkeys",
+    function()
       return false, hotkeys_popup.show_help
-    end},
+    end
+  },
   {"manual", terminal .. " -e man awesome"},
   {"edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile)},
   {"restart", awesome.restart},
-  {"quit", function()
+  {
+    "quit",
+    function()
       awesome.quit()
-    end}
+    end
+  }
 }
 awful.util.mymainmenu =
   freedesktop.menu.build(
@@ -571,6 +576,63 @@ globalkeys =
       lain.util.delete_tag()
     end,
     {description = "delete tag", group = "tag"}
+  ),
+  -- custom tags
+  awful.key(
+    {modkey},
+    "#" .. 7 + 9,
+    function()
+      local tag = awful.tag.add(
+        "🍺",
+        {
+          index = 7,
+          layout = awful.layout.suit.tile,
+          master_fill_policy = "master_width_factor",
+          master_width_factor = 0.7
+        }
+      )
+      tag:view_only();
+      
+      -- os.execute permits here to open clients in the right order
+      -- FIXME: performance (using awful.spawn ?)
+      os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/chrome-com.desktop")
+      os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/twitter.desktop")
+      os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/google-messages.desktop")
+    end,
+    {description = "communication tag", group = "tag"}
+  ),
+  awful.key(
+    {modkey},
+    "#" .. 8 + 9,
+    function()
+      local tag = awful.tag.add(
+        "🔍",
+        {
+          index = 8,
+          layout = awful.layout.suit.tile
+        }
+      )
+      tag:view_only();
+      awful.spawn(browser)
+    end,
+    {description = "browser tag", group = "tag"}
+  ),
+  awful.key(
+    {modkey},
+    "#" .. 9 + 9,
+    function()
+      local tag = awful.tag.add(
+        "🛠",
+        {
+          index = 9,
+          layout = awful.layout.suit.tile,
+          master_width_factor = 0.7
+        }
+      )
+      tag:view_only()
+      awful.spawn(guieditor)
+    end,
+    {description = "code tag", group = "tag"}
   ),
   -- Standard program
   awful.key(
@@ -882,6 +944,14 @@ globalkeys =
     {description = "run prompt", group = "launcher"}
   ),
   awful.key(
+    {},
+    "XF86Search",
+    function()
+      os.execute("rofi -combi-modi window,drun -show combi -modi combi")
+    end,
+    {description = "app launcher", group = "launcher"}
+  ),
+  awful.key(
     {modkey},
     "x",
     function()
@@ -971,7 +1041,7 @@ clientkeys =
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
+for i = 1, 6 do
   -- Hack to only show tags 1 and 9 in the shortcut window (mod+s)
   local descr_view, descr_toggle, descr_move, descr_toggle_focus
   if i == 1 or i == 9 then
@@ -1094,11 +1164,6 @@ awful.rules.rules = {
     rule_any = {type = {"dialog", "normal"}},
     properties = {titlebars_enabled = true}
   },
-  -- Set Firefox to always map on the first tag on screen 1.
-  {
-    rule = {class = "Firefox"},
-    properties = {screen = 1, tag = awful.util.tagnames[1]}
-  },
   {
     rule = {class = "Gimp", role = "gimp-image-window"},
     properties = {maximized = true}
@@ -1113,7 +1178,7 @@ client.connect_signal(
   function(c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
-    -- if not awesome.startup then awful.client.setslave(c) end
+    if not awesome.startup then awful.client.setslave(c) end
 
     if awesome.startup and not c.size_hints.user_position and not c.size_hints.program_position then
       -- Prevent clients from being unreachable after screen count changes.
