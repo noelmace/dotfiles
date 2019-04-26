@@ -20,7 +20,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 require("awful.hotkeys_popup.keys")
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi = require("beautiful.xresources").apply_dpi
-local json = require("jsonlua.json") -- TODO: use luarocks
+local json = require("json")
 -- }}}
 
 -- {{{ Error handling
@@ -84,21 +84,6 @@ awful.spawn.with_shell(
 
 -- {{{ Variable definitions
 
-local loadJson = function(path)
-  local contents = ""
-  local myTable = {}
-  local file = io.open( path, "r" )
-
-  if file then
-      -- read all contents of file into a string
-      local contents = file:read( "*a" )
-      myTable = json.decode(contents);
-      io.close( file )
-      return myTable
-  end
-  return nil
-end
-
 local themes = {
   "blackburn", -- 1
   "copland", -- 2
@@ -114,7 +99,7 @@ local themes = {
 
 local chosen_theme = themes[7]
 
-local config = loadJson(os.getenv("HOME") .. "/.config/awesome/config.json")
+local config = json.load(os.getenv("HOME") .. "/.config/awesome/config.json")
 
 local modkey = config.keys.mod
 local altkey = config.keys.alt
