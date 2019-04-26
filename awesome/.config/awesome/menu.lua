@@ -1,4 +1,6 @@
 local freedesktop = require("freedesktop")
+local hotkeys_popup = require("awful.hotkeys_popup").widget
+local beautiful = require("beautiful")
 
 local myawesomemenu = {
   {

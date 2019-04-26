@@ -1,4 +1,5 @@
 local dpi = require("beautiful.xresources").apply_dpi
+local beautiful = require("beautiful")
 local wibox = require("wibox")
 
 -- Signal function to execute when a new client appears.
@@ -29,7 +30,7 @@ client.connect_signal(
     -- Default
     -- buttons for the titlebar
     local buttons =
-      my_table.join(
+      tableCompat.join(
       awful.button(
         {},
         1,

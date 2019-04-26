@@ -1,4 +1,6 @@
-return my_table.join(
+local lain = require("lain")
+
+return tableCompat.join(
   awful.key({altkey, "Shift"}, "m", lain.util.magnify_client, {description = "magnify client", group = "client"}),
   awful.key(
     {modkey},

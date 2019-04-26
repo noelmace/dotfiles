@@ -1,5 +1,9 @@
+local hotkeys_popup = require("awful.hotkeys_popup").widget
+local lain = require("lain")
+local beautiful = require("beautiful")
+
 local globalkeys =
-  my_table.join(
+  tableCompat.join(
   -- Take a screenshot
   -- https://github.com/lcpz/dots/blob/master/bin/screenshot
   awful.key(
@@ -613,8 +617,8 @@ for i = 1, 6 do
     descr_move = {description = "move focused client to tag #", group = "tag"}
     descr_toggle_focus = {description = "toggle focused client on tag #", group = "tag"}
   end
-  globalkeys =
-    my_table.join(
+  gltableCompat =
+    tableCompat.join(
     globalkeys,
     -- View tag only.
     awful.key(

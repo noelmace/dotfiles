@@ -1,5 +1,5 @@
 awful.util.tasklist_buttons =
-  my_table.join(
+  tableCompat.join(
   awful.button(
     {},
     1,

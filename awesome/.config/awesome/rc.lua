@@ -1,20 +1,20 @@
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
 
-gears = require("gears")
 awful = require("awful")
-beautiful = require("beautiful")
-lain = require("lain")
-
-hotkeys_popup = require("awful.hotkeys_popup").widget
-my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 
+local gears = require("gears")
+local beautiful = require("beautiful")
+local lain = require("lain")
+local hotkeys_popup = require("awful.hotkeys_popup").widget
 local naughty = require("naughty")
 local dpi = require("beautiful.xresources").apply_dpi
 local json = require("json")
+
+tableCompat = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 ---------------- Error handling ----------------
 
@@ -74,7 +74,7 @@ awful.spawn.with_shell(
 )
 --]]
 
----------------- Variable definitions ----------------
+---------------- GLOBAL config ----------------
 
 config = json.load(os.getenv("HOME") .. "/.config/awesome/config.json")
 
