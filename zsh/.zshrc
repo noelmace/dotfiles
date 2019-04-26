@@ -224,3 +224,6 @@ alias npmp="npx install-peerdeps"
 
 source /usr/share/nvm/init-nvm.sh
 source /etc/profile.d/autojump.bash
+export LUA_PATH='/home/noel/.luarocks/share/lua/5.3/?.lua;/home/noel/.luarocks/share/lua/5.3/?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua;/usr/lib/lua/5.3/?.lua;/usr/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua'
+export LUA_CPATH='/home/noel/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so'
+export PATH='/home/noel/.luarocks/bin:/usr/bin:/home/noel/.nvm/versions/node/v11.14.0/bin:/home/noel/.yarn/bin:/home/noel/.config/yarn/global/node_modules/.bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/go/bin'

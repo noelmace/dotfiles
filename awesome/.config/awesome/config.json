@@ -1,0 +1,17 @@
+{
+  "default": {
+    "terminal": "hyper",
+    "browser": "google-chrome-unstable",
+    "guieditor": "code",
+    "scrlocker": "physlock",
+    "editor": "vim"
+  },
+  "keys": {
+    "mod": "Mod4",
+    "alt": "Mod1"
+  },
+  "theme": "powerarrow-dark",
+  "tags": {
+    "base": ["1", "2", "3"]
+  }
+}

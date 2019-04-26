@@ -37,3 +37,6 @@
 [submodule "aur/vscode"]
 	path = aur/vscode
 	url = https://aur.archlinux.org/visual-studio-code-bin.git
+[submodule "awesome/.config/awesome/jsonlua"]
+	path = awesome/.config/awesome/jsonlua
+	url = git@github.com:rxi/json.lua.git

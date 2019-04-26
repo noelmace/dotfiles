@@ -20,6 +20,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 require("awful.hotkeys_popup.keys")
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi = require("beautiful.xresources").apply_dpi
+local json = require("jsonlua.json") -- TODO: use luarocks
 -- }}}
 
 -- {{{ Error handling
@@ -83,6 +84,21 @@ awful.spawn.with_shell(
 
 -- {{{ Variable definitions
 
+local loadJson = function(path)
+  local contents = ""
+  local myTable = {}
+  local file = io.open( path, "r" )
+
+  if file then
+      -- read all contents of file into a string
+      local contents = file:read( "*a" )
+      myTable = json.decode(contents);
+      io.close( file )
+      return myTable
+  end
+  return nil
+end
+
 local themes = {
   "blackburn", -- 1
   "copland", -- 2
@@ -97,16 +113,21 @@ local themes = {
 }
 
 local chosen_theme = themes[7]
-local modkey = "Mod4"
-local altkey = "Mod1"
-local terminal = "hyper"
-local editor = os.getenv("EDITOR") or "vim"
-local browser = "google-chrome-unstable"
-local guieditor = "code"
-local scrlocker = "physlock"
+
+local config = loadJson(os.getenv("HOME") .. "/.config/awesome/config.json")
+
+local modkey = config.keys.mod
+local altkey = config.keys.alt
+local terminal = config.default.terminal
+local editor = os.getenv("EDITOR") or config.default.editor
+local browser = config.default.browser
+local guieditor = config.default.guieditor
+local scrlocker = config.default.scrlocker
 
 awful.util.terminal = terminal
-awful.util.tagnames = {"1", "2", "3"}
+
+awful.util.tagnames = config.tags.base
+
 awful.layout.layouts = {
   awful.layout.suit.floating,
   awful.layout.suit.tile,
