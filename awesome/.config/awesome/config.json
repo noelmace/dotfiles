@@ -16,5 +16,6 @@
   },
   "menu": {
     "mouseOnly": false
-  }
+  },
+  "xdgAutostart": false
 }

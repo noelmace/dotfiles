@@ -77,15 +77,15 @@ end
 
 run_once({"urxvtd", "unclutter -root"}) -- entries must be separated by commas
 
--- This function implements the XDG autostart specification
---[[
-awful.spawn.with_shell(
+if (config.xdgAutostart) then
+  -- This function implements the XDG autostart specification
+  awful.spawn.with_shell(
     'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
-    'xrdb -merge <<< "awesome.started:true";' ..
-    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
-)
---]]
+      'xrdb -merge <<< "awesome.started:true";' ..
+        -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
+        'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
+  )
+end
 
 ---------------- Layouts ----------------
 
