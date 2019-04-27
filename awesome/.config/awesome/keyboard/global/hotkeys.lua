@@ -2,10 +2,10 @@ return tableCompat.join(
   -- Take a screenshot
   -- https://github.com/lcpz/dots/blob/master/bin/screenshot
   awful.key(
-    {altkey},
-    "p",
+    {},
+    "Print",
     function()
-      os.execute("screenshot")
+      awful.spawn.with_shell("scrot ~/screenshots/%Y-%m-%d-%T.png")
     end,
     {description = "take a screenshot", group = "hotkeys"}
   ),
