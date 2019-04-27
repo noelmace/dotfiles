@@ -34,7 +34,23 @@ return tableCompat.join(
       os.execute("xbacklight -dec 5")
     end,
     {description = "-5%", group = "hotkeys"}
-  ),  
+  ), 
+  awful.key(
+    {modkey},
+    "XF86MonBrightnessUp",
+    function()
+      os.execute("xbacklight = 100")
+    end,
+    {description = "highest brightness", group = "hotkeys"}
+  ),
+  awful.key(
+    {modkey},
+    "XF86MonBrightnessDown",
+    function()
+      os.execute("xbacklight = 1")
+    end,
+    {description = "lowest brightness", group = "hotkeys"}
+  ),
   -- Copy primary to clipboard (terminals to gtk)
   awful.key(
     {modkey},
