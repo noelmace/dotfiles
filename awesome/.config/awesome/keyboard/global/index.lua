@@ -18,15 +18,17 @@ local tagsWithClient = require("keyboard.global.tags-with-client")
 local widgets = require("keyboard.global.widgets")
 
 return tableCompat.join(
-  tagsWithClient,
-  layoutManipulation,
-  tagBrowsing,
-  clientFocus,
-  numKeys,
-  apps,
-  mpdControl,
   alsaVolume,
+  apps,
+  awesome,
+  clientFocus,
+  dynamicTaging,
+  hotkeys,
+  layoutManipulation,
+  mpdControl,
+  numKeys,
   prompt,
-  widgets,
-  awesome
+  tagBrowsing,
+  tagsWithClient,
+  widgets
 )
