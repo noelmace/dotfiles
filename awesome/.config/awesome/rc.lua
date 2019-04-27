@@ -167,14 +167,17 @@ awful.screen.connect_for_each_screen(
 )
 
 ---------------- Mouse bindings ----------------
-require('buttons.root')
-local clientbuttons = require('buttons.client')
+local globalButtons = require('buttons.root')
+root.buttons(globalButtons)
 
 ---------------- Key bindings ----------------
-require("keyboard.global")
-local clientkeys = require("keyboard.client")
+local globalKeys = require("keyboard.global.index")
+root.keys(globalKeys)
 
 ---------------- Rules ----------------
+
+local clientkeys = require("keyboard.client")
+local clientbuttons = require('buttons.client')
 
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
