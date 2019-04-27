@@ -111,64 +111,23 @@ local chosen_theme = config.theme
 
 beautiful.init(string.format("%s/.config/awesome/copycats/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 
----------------- Menu ----------------
+----------------
 
 require("menu")
 
----------------- Screen ----------------
+require("screen")
 
--- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal(
-  "property::geometry",
-  function(s)
-    -- Wallpaper
-    if beautiful.wallpaper then
-      local wallpaper = beautiful.wallpaper
-      -- If wallpaper is a function, call it with the screen
-      if type(wallpaper) == "function" then
-        wallpaper = wallpaper(s)
-      end
-      gears.wallpaper.maximized(wallpaper, s, true)
-    end
-  end
-)
-
--- No borders when rearranging only 1 non-floating or maximized client
-screen.connect_signal(
-  "arrange",
-  function(s)
-    local only_one = #s.tiled_clients == 1
-    for _, c in pairs(s.clients) do
-      if only_one and not c.floating or c.maximized then
-        c.border_width = 0
-      else
-        c.border_width = beautiful.border_width
-      end
-    end
-  end
-)
-
--- Create a wibox for each screen and add it
-awful.screen.connect_for_each_screen(
-  function(s)
-    beautiful.at_screen_connect(s)
-  end
-)
-
----------------- Mouse bindings ----------------
+-- mouse bindings
 local globalButtons = require("buttons.root")
 root.buttons(globalButtons)
 
----------------- Key bindings ----------------
+-- key bindings
 local globalKeys = require("keyboard.global.index")
 root.keys(globalKeys)
-
----------------- Rules ----------------
 
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = require("rules")
 
----------------- Signals ----------------
 require("signals")
 
 -- possible workaround for tag preservation when switching back to default screen:
