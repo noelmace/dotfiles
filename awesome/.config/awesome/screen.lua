@@ -1,3 +1,6 @@
+local gears = require("gears")
+local beautiful = require("beautiful")
+
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal(
   "property::geometry",
