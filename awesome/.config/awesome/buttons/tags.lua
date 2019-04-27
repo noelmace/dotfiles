@@ -1,5 +1,4 @@
-awful.util.taglist_buttons =
-  tableCompat.join(
+return tableCompat.join(
   awful.button(
     {},
     1,
