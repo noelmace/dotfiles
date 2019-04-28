@@ -4,10 +4,7 @@ exit 1
 
 ## Packages
 
-sudo pacman -Sy
-
-## packages list: see packages.dsv
-pacman -Qent --info
+sudo pacman -Sy $(cat packages.dsv | cut -d' ' -f1)
 
 # X Window System
 sudo pacman -S awesome xbacklight xorg-xmodmap
@@ -23,13 +20,14 @@ sudo pacman -S libicns graphicsmagick xz yarn
 sudo pacman -S alsa-utils playerctl
 # LightDM 
 sudo pacman -S lightdm lightdm-gtk-greeter
-# VS Code
-sudo pacman -S code
-# Bluetooth
+# Bluetooth (bluetoothctl)
 sudo pacman -S bluez bluez-utils
 
 # don't install yarn with pacman as it would install nodejs
 curl -o- -L https://yarnpkg.com/install.sh | bash
+
+# install vs code extensions
+cat code-extensions.list | xargs -L 1 echo code --install-extension
 
 ## system config
 
@@ -64,21 +62,6 @@ sudo wifi-menu
 # check installed packages
 grep -i installed /var/log/pacman.log
 
-### Misc
-
-## screen locker
-# physlock
-
-## shutdown
-## FIXME: shutdown hangs when using lightdm or shutdown command
-# sudo systemctl poweroff
-
-## reboot
-# sudo systemctl reboot
-
-## bluetooth config - interactive
-# bluetoothctl
-
 ## run awesome in a nested X server for tests
 ## ctrl+shift to capture keyboard and mouse
-# Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome
+Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome
