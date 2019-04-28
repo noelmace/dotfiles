@@ -91,10 +91,11 @@ end
 
 awful.layout.layouts = {
   awful.layout.suit.tile,
-  awful.layout.suit.tile.left,
   awful.layout.suit.tile.top,
   awful.layout.suit.floating,
-  awful.layout.suit.max
+  awful.layout.suit.max,
+  awful.layout.suit.max.fullscreen,
+  awful.layout.suit.tile.left
   -- see https://awesomewm.org/apidoc/libraries/awful.layout.html#awful.layout.suit.
   -- and https://github.com/lcpz/lain/wiki/Layouts
 }
