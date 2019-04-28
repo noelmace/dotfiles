@@ -13,6 +13,7 @@ return tableCompat.join(
           master_width_factor = 0.7
         }
       )
+      
       tag:view_only()
 
       -- os.execute permits here to open clients in the right order
@@ -21,7 +22,7 @@ return tableCompat.join(
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/twitter.desktop")
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/google-messages.desktop")
     end,
-    {description = "communication tag", group = "tag"}
+    {description = "🍺 add communication", group = "tag"}
   ),
   awful.key(
     {modkey},
@@ -38,7 +39,7 @@ return tableCompat.join(
       tag:view_only()
       awful.spawn(browser)
     end,
-    {description = "browser tag", group = "tag"}
+    {description = "🔍 add browser", group = "tag"}
   ),
   awful.key(
     {modkey},
@@ -56,6 +57,6 @@ return tableCompat.join(
       tag:view_only()
       awful.spawn(guieditor)
     end,
-    {description = "code tag", group = "tag"}
+    {description = "🛠 code tag", group = "tag"}
   )
 )
