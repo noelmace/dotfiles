@@ -29,9 +29,22 @@ return tableCompat.join(
     {modkey},
     "z",
     function()
-      -- FIXME
       awful.screen.focused().quake:toggle()
     end,
     {description = "dropdown application", group = "launcher"}
+  ),
+  -- screen capture GUI
+  awful.key(
+    {modkey, altkey},
+    "r",
+    function()
+      awful.spawn("peek", {
+        floating = true,
+        focus = true,
+        titlebars_enabled = false,
+        maximized = true
+      })
+    end,
+    {description = "screen recording", group = "launcher"}
   )
 )
