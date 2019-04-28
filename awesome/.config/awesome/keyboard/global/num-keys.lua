@@ -6,7 +6,7 @@ local numKeys = {}
 for i = 1, 6 do
   -- Hack to only show tags 1 and 9 in the shortcut window (mod+s)
   local descr_view, descr_toggle, descr_move, descr_toggle_focus
-  if i == 1 or i == 9 then
+  if i == 1 or i == 6 then
     descr_view = {description = "view tag #", group = "tag"}
     descr_toggle = {description = "toggle tag #", group = "tag"}
     descr_move = {description = "move focused client to tag #", group = "tag"}

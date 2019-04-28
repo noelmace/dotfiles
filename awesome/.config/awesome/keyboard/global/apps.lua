@@ -5,7 +5,7 @@ return tableCompat.join(
     function()
       awful.spawn(terminal)
     end,
-    {description = "open a terminal", group = "launcher"}
+    {description = "open a terminal", group = "apps"}
   ),
   -- User programs
   awful.key(
@@ -14,7 +14,7 @@ return tableCompat.join(
     function()
       awful.spawn(browser)
     end,
-    {description = "run browser", group = "launcher"}
+    {description = "run browser", group = "apps"}
   ),
   awful.key(
     {modkey},
@@ -22,7 +22,7 @@ return tableCompat.join(
     function()
       awful.spawn(guieditor)
     end,
-    {description = "run gui editor", group = "launcher"}
+    {description = "run gui editor", group = "apps"}
   ),
   -- Dropdown application
   awful.key(
@@ -31,7 +31,7 @@ return tableCompat.join(
     function()
       awful.screen.focused().quake:toggle()
     end,
-    {description = "dropdown application", group = "launcher"}
+    {description = "dropdown application", group = "apps"}
   ),
   -- screen capture GUI
   awful.key(
@@ -45,6 +45,6 @@ return tableCompat.join(
         maximized = true
       })
     end,
-    {description = "screen recording", group = "launcher"}
+    {description = "screen recording", group = "apps"}
   )
 )

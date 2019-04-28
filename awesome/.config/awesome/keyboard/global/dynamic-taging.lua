@@ -23,7 +23,7 @@ return tableCompat.join(
     function()
       lain.util.move_tag(-1)
     end,
-    {description = "move tag to the left", group = "tag"}
+    {description = "move tag to the left", group = "dynamic tag"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -31,7 +31,7 @@ return tableCompat.join(
     function()
       lain.util.move_tag(1)
     end,
-    {description = "move tag to the right", group = "tag"}
+    {description = "move tag to the right", group = "dynamic tag"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -39,6 +39,6 @@ return tableCompat.join(
     function()
       lain.util.delete_tag()
     end,
-    {description = "delete tag", group = "tag"}
+    {description = "delete tag", group = "dynamic tag"}
   )
 )

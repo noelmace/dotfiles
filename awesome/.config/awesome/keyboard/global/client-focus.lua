@@ -1,4 +1,45 @@
 return tableCompat.join(
+  awful.key(
+    {modkey, "Shift"},
+    "j",
+    function()
+      awful.client.swap.byidx(1)
+    end,
+    {description = "swap with next client by index", group = "client"}
+  ),
+  awful.key(
+    {modkey, "Shift"},
+    "k",
+    function()
+      awful.client.swap.byidx(-1)
+    end,
+    {description = "swap with previous client by index", group = "client"}
+  ),
+  awful.key({modkey}, "u", awful.client.urgent.jumpto, {description = "jump to urgent client", group = "client"}),
+  awful.key(
+    {modkey},
+    "Tab",
+    function()
+      awful.client.focus.history.previous()
+      if client.focus then
+        client.focus:raise()
+      end
+    end,
+    {description = "go back", group = "client"}
+  ),
+  awful.key(
+    {modkey, "Control"},
+    "n",
+    function()
+      local c = awful.client.restore()
+      -- Focus restored client
+      if c then
+        client.focus = c
+        c:raise()
+      end
+    end,
+    {description = "restore minimized", group = "client"}
+  ),
   -- Default client focus
   awful.key(
     {altkey},
@@ -60,13 +101,5 @@ return tableCompat.join(
       end
     end,
     {description = "focus right", group = "client"}
-  ),
-  awful.key(
-    {modkey},
-    "w",
-    function()
-      awful.util.mymainmenu:show()
-    end,
-    {description = "show main menu", group = "awesome"}
   )
 )

@@ -5,7 +5,7 @@ return tableCompat.join(
     function()
       awful.screen.focused().mypromptbox:run()
     end,
-    {description = "run prompt", group = "launcher"}
+    {description = "run prompt", group = "run"}
   ),
   awful.key(
     {},
@@ -13,7 +13,7 @@ return tableCompat.join(
     function()
       os.execute("rofi -combi-modi window,drun -show combi -modi combi")
     end,
-    {description = "app launcher", group = "launcher"}
+    {description = "app launcher", group = "run"}
   ),
   awful.key(
     {modkey},
@@ -26,6 +26,6 @@ return tableCompat.join(
         history_path = awful.util.get_cache_dir() .. "/history_eval"
       }
     end,
-    {description = "lua execute prompt", group = "awesome"}
+    {description = "lua execute prompt", group = "run"}
   )
 )

@@ -17,5 +17,13 @@ return tableCompat.join(
       end
     end,
     {description = "toggle wibox", group = "awesome"}
+  ),
+  awful.key(
+    {modkey},
+    "w",
+    function()
+      awful.util.mymainmenu:show()
+    end,
+    {description = "show main menu", group = "awesome"}
   )
 )
