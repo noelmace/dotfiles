@@ -4,6 +4,13 @@ A bunch of dotfiles and some other stuff I use. That it.
 
 ## Install
 
+```
+cd ~
+git clone https://github.com/noelmace/dotfiles.git
+cd dotfiles
+bash install.sh
+```
+
 ### Dotfiles
 
 Just clone this repository (or a fork) in your home directory, and use [GNU Stow](https://www.gnu.org/software/stow/) in order to use a specific configuration:
@@ -18,7 +25,7 @@ I also keep some other usefull system config and scripts here:
 
 > _**FYI**: I mainly use Arch Linux, and sometimes Debian. Obviously, some parts of this project would need some tweaking if you don't use Arch Linux yourself._
 
-For more details see [install.sh](./install.sh). _Don't use this script directly! I only use it when if need to take down any notes about some commands I use, not for automatic install._
+For more details see [install.sh](./install.sh). _Don't use this script directly! I only use it when if need to take down any notes about some commands I use, not for automating system installs._
 
 ## Sub-projects
 
@@ -62,11 +69,6 @@ Highly configurable, next generation framework window manager for X.
 | :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
 |----------------|---------------------------------|------------------------|
 | [awesomeWM/awesome](https://github.com/awesomeWM/awesome)| awesomewm.org | `pacman -S awesome` |
-
-### Widgets
-
-- [deficient/battery-widget](https://github.com/deficient/battery-widget)
-
 
 ## CLI
 

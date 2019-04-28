@@ -1,5 +1,4 @@
-### Just some notes for myself
-### DON'T RUN this without modifications
+echo "You should check the install.sh file and modify it first."
 exit 1
 
 ## Packages
