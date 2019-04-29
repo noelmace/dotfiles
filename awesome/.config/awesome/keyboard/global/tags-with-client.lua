@@ -3,18 +3,11 @@ return tableCompat.join(
     {modkey},
     "#" .. 7 + 9,
     function()
-      local tag =
-        awful.tag.add(
-        "🍺",
-        {
-          index = 7,
-          layout = awful.layout.suit.tile,
-          master_fill_policy = "master_width_factor",
-          master_width_factor = 0.7
-        }
-      )
-      
-      tag:view_only()
+      local tag = awful.screen.focused().selected_tag
+      tag.name = tag.name .. ".🍺"
+      tag.layout = awful.layout.suit.tile
+      tag.master_fill_policy = "master_width_factor"
+      tag.master_width_factor = 0.7
 
       -- os.execute permits here to open clients in the right order
       -- FIXME: performance (using awful.spawn ?)
@@ -22,41 +15,29 @@ return tableCompat.join(
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/twitter.desktop")
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/google-messages.desktop")
     end,
-    {description = "🍺 add communication", group = "tag"}
+    {description = "set tag as 🍺", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey},
     "#" .. 8 + 9,
     function()
-      local tag =
-        awful.tag.add(
-        "🔍",
-        {
-          index = 8,
-          layout = awful.layout.suit.tile
-        }
-      )
-      tag:view_only()
+      local tag = awful.screen.focused().selected_tag
+      tag.name = tag.name .. ".🔍"
+      tag.layout = awful.layout.suit.tile
       awful.spawn(browser)
     end,
-    {description = "🔍 add browser", group = "tag"}
+    {description = "set tag as 🔍", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey},
     "#" .. 9 + 9,
     function()
-      local tag =
-        awful.tag.add(
-        "🛠",
-        {
-          index = 9,
-          layout = awful.layout.suit.tile,
-          master_width_factor = 0.7
-        }
-      )
-      tag:view_only()
+      local tag = awful.screen.focused().selected_tag
+      tag.master_width_factor = 0.7
+      tag.layout = awful.layout.suit.tile
+      tag.name = tag.name .. ".🛠"
       awful.spawn(guieditor)
     end,
-    {description = "🛠 code tag", group = "tag"}
+    {description = "set tag as 🛠", group = "dynamic tagging"}
   )
 )
