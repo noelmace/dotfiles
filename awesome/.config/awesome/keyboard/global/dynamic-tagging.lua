@@ -7,7 +7,7 @@ return tableCompat.join(
     function()
       lain.util.add_tag()
     end,
-    {description = "add new tag", group = "tag"}
+    {description = "add new tag", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -15,7 +15,7 @@ return tableCompat.join(
     function()
       lain.util.rename_tag()
     end,
-    {description = "rename tag", group = "tag"}
+    {description = "rename tag", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -23,7 +23,7 @@ return tableCompat.join(
     function()
       lain.util.move_tag(-1)
     end,
-    {description = "move tag to the left", group = "dynamic tag"}
+    {description = "move tag to the left", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -31,7 +31,7 @@ return tableCompat.join(
     function()
       lain.util.move_tag(1)
     end,
-    {description = "move tag to the right", group = "dynamic tag"}
+    {description = "move tag to the right", group = "dynamic tagging"}
   ),
   awful.key(
     {modkey, "Shift"},
@@ -39,6 +39,6 @@ return tableCompat.join(
     function()
       lain.util.delete_tag()
     end,
-    {description = "delete tag", group = "dynamic tag"}
+    {description = "delete tag", group = "dynamic tagging"}
   )
 )
