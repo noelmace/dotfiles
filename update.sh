@@ -14,8 +14,12 @@ then
   exit 1
 fi
 
-# remove orphan packages
-sudo pacman -R $(pacman -Qtd | cut -d' ' -f1)
+ORPHANS=$(pacman -Qtd | cut -d' ' -f1)
+
+if [ ! -z "$ORPHANS" ]; then
+  # remove orphan packages
+  sudo pacman -R $ORPHANS
+fi
 
 # update
 sudo pacman -Syu
