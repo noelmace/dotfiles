@@ -4,7 +4,7 @@ return tableCompat.join(
     "#" .. 7 + 9,
     function()
       local tag = awful.screen.focused().selected_tag
-      tag.name = tag.name .. ".🍺"
+      tag.name = "🍺"
       tag.layout = awful.layout.suit.tile
       tag.master_fill_policy = "master_width_factor"
       tag.master_width_factor = 0.7
@@ -22,7 +22,7 @@ return tableCompat.join(
     "#" .. 8 + 9,
     function()
       local tag = awful.screen.focused().selected_tag
-      tag.name = tag.name .. ".🔍"
+      tag.name = "🔍"
       tag.layout = awful.layout.suit.tile
       awful.spawn(browser)
     end,
@@ -35,7 +35,7 @@ return tableCompat.join(
       local tag = awful.screen.focused().selected_tag
       tag.master_width_factor = 0.7
       tag.layout = awful.layout.suit.tile
-      tag.name = tag.name .. ".🛠"
+      tag.name = "🛠"
       awful.spawn(guieditor)
     end,
     {description = "set tag as 🛠", group = "dynamic tagging"}
