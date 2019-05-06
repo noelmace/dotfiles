@@ -15,7 +15,7 @@ coreutils 8.31-1
 cryptsetup 2.1.0-1
 device-mapper 2.02.184-4
 dex 0.8.0-2
-dhcpcd 7.0.8-1
+dhcpcd 7.2.1-1
 dialog 1:1.3_20190211-1
 diffutils 3.7-1
 e2fsprogs 1.45.0-1
@@ -32,7 +32,7 @@ gettext 0.19.8.1-3
 git 2.21.0-1
 glibc 2.29-1
 gnome-mplayer 1.0.9-7
-google-chrome-dev 75.0.3766.2-1
+google-chrome-dev 76.0.3783.0-1
 grep 3.3-1
 grub 2:2.02-8
 gtk2 2.24.32-1
@@ -50,15 +50,16 @@ jfsutils 1.1.15-6
 jre-openjdk 11.0.3.u4-1
 less 530-1
 libicns 0.8.1-6
+libreoffice-still 6.1.5-5
 libtool 2.4.6+42+gb88cebd5-3
 licenses 20181104-1
 lightdm 1:1.28.0-4
 lightdm-gtk-greeter 1:2.0.6-1
-linux 5.0.9.arch1-1
-linux-firmware 20190313.efd2c1c-1
+linux 5.0.13.arch1-1
+linux-firmware 20190424.4b6cf2b-1
 logrotate 3.15.0-1
 lsdesktopf 1.0.7-4
-luarocks 3.0.4-2
+luarocks 3.1.0-1
 lvm2 2.02.184-4
 m4 1.4.18-2
 make 4.2.1-3
@@ -94,7 +95,7 @@ shadow 4.6-2
 stow 2.2.2-5
 sudo 1.8.27-1
 sysfsutils 2.1.0-10
-systemd-sysvcompat 242.16-1
+systemd-sysvcompat 242.19-1
 tar 1.32-1
 texinfo 6.6-1
 transmission-cli 2.94-1
