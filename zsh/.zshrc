@@ -221,6 +221,7 @@ alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
 alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
 alias npmp="npx install-peerdeps"
+alias sub="subliminal download -l fr"
 
 source /usr/share/nvm/init-nvm.sh
 source /etc/profile.d/autojump.bash
