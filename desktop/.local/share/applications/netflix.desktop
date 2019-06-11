@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Netflix
+Exec=/opt/google/chrome-unstable/google-chrome-unstable --app=https://www.netflix.com/
+Icon=google-chrome-unstable
