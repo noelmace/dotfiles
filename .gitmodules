@@ -40,3 +40,6 @@
 [submodule "awesome/.config/awesome/jsonlua"]
 	path = awesome/.config/awesome/jsonlua
 	url = git@github.com:rxi/json.lua.git
+[submodule "aur/google-chrome"]
+	path = aur/google-chrome
+	url = https://aur.archlinux.org/google-chrome.git
