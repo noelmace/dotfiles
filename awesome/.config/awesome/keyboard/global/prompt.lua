@@ -1,15 +1,15 @@
 return tableCompat.join(
+  -- awful.key(
+  --   {modkey},
+  --   "r",
+  --   function()
+  --     awful.screen.focused().mypromptbox:run()
+  --   end,
+  --   {description = "run prompt", group = "run"}
+  -- ),
   awful.key(
     {modkey},
     "r",
-    function()
-      awful.screen.focused().mypromptbox:run()
-    end,
-    {description = "run prompt", group = "run"}
-  ),
-  awful.key(
-    {},
-    "XF86Search",
     function()
       os.execute("rofi -combi-modi window,drun -show combi -modi combi")
     end,
