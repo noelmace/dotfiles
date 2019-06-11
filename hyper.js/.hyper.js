@@ -17,7 +17,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: isDemo ? 32 : 16,
+    fontSize: isDemo ? 32 : 14,
 
     // font family with optional fallbacks
     fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
