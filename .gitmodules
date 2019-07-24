@@ -43,3 +43,6 @@
 [submodule "aur/google-chrome"]
 	path = aur/google-chrome
 	url = https://aur.archlinux.org/google-chrome.git
+[submodule "aur/v4l2loopback"]
+	path = aur/v4l2loopback
+	url = https://aur.archlinux.org/v4l2loopback-dkms.git
