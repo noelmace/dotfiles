@@ -222,6 +222,7 @@ alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
 alias npmp="npx install-peerdeps"
 alias sub="subliminal download -l fr"
+alias imhome="bluetoothctl -- power on && bash $HOME/.screenlayout/home-office.sh && xbacklight = 0"
 alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS Cam\" exclusive_caps=1 \
     && sudo modprobe snd-aloop index=10 id=\"OBS Mic\" \
     && pacmd 'update-source-proplist alsa_input.platform-snd_aloop.0.analog-stereo device.description=\"OBS Mic\" ' \

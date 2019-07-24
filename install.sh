@@ -51,6 +51,7 @@ stow git
 stow hyper.js
 stow vsconf
 stow zsh
+stow arandr
 
 ## Tools
 
