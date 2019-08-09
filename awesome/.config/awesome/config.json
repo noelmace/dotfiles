@@ -1,8 +1,8 @@
 {
   "default": {
-    "terminal": "hyper",
+    "terminal": "hyper --disable-gpu",
     "browser": "google-chrome-unstable",
-    "guieditor": "code",
+    "guieditor": "code --disable-gpu",
     "scrlocker": "physlock",
     "editor": "vim"
   },
