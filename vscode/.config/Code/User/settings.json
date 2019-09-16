@@ -35,5 +35,8 @@
   },
   "editor.tabCompletion": "on",
   "rewrap.wrappingColumn": 120,
-  "javascript.implicitProjectConfig.checkJs": true
+  "javascript.implicitProjectConfig.checkJs": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
