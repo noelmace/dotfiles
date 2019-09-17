@@ -46,3 +46,6 @@
 [submodule "aur/v4l2loopback"]
 	path = aur/v4l2loopback
 	url = https://aur.archlinux.org/v4l2loopback-dkms.git
+[submodule "aur/slack-desktop"]
+	path = aur/slack-desktop
+	url = https://aur.archlinux.org/slack-desktop.git
