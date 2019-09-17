@@ -23,6 +23,11 @@ export PATH=$PATH:/usr/local/go/bin
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# lua
+export LUA_PATH='/home/noel/.luarocks/share/lua/5.3/?.lua;/home/noel/.luarocks/share/lua/5.3/?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua;/usr/lib/lua/5.3/?.lua;/usr/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua'
+export LUA_CPATH='/home/noel/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so'
+export PATH="/home/noel/.luarocks/bin:$PATH"
+
 # github/hub tool
 eval "$(hub alias -s)"
 GITHUB_USER="noelmace"
@@ -132,9 +137,13 @@ zhelp() {
   cat $HOME/.oh-my-zsh/plugins/$1/$1.plugin.zsh | grep ${@:2}
 }
 
+[ -s "/etc/profile.d/autojump.zsh" ] && source /etc/profile.d/autojump.zsh
+
+# NVM
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # .zshrc.d
 
@@ -216,7 +225,7 @@ fi
 DEBUG_NODE="node --max_old_space_size=8192 --inspect-brk"
 alias chrome="google-chrome-unstable"
 alias dnode="$DEBUG_NODE"
-alias dngg="$DEBUG_NODe $(where ng)"
+alias dngg="$DEBUG_NODE $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
 alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
@@ -229,9 +238,3 @@ alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS 
     && ffmpeg -probesize 32 -analyzeduration 0 -listen 1 -i rtmp://127.0.0.1:1935/live/test -map 0:1 -f v4l2 -vcodec rawvideo /dev/video10 -map 0:0 -f alsa hw:10,1"
 alias fanq="sudo smbios-thermal-ctl --set-thermal-mode=Balanced"
 alias fanp="sudo smbios-thermal-ctl --set-thermal-mode=Performance"
-
-source /usr/share/nvm/init-nvm.sh
-source /etc/profile.d/autojump.bash
-export LUA_PATH='/home/noel/.luarocks/share/lua/5.3/?.lua;/home/noel/.luarocks/share/lua/5.3/?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua;/usr/lib/lua/5.3/?.lua;/usr/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua'
-export LUA_CPATH='/home/noel/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so'
-export PATH='/home/noel/.luarocks/bin:/usr/bin:/home/noel/.nvm/versions/node/v11.14.0/bin:/home/noel/.yarn/bin:/home/noel/.config/yarn/global/node_modules/.bin:/usr/local/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/go/bin'
