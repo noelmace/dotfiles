@@ -1,19 +1,30 @@
 return tableCompat.join(
   awful.key(
     {modkey},
+    "#" .. 6 + 9,
+    function()
+      local tag = awful.screen.focused().selected_tag
+      tag.name = "🖥️"
+      tag.layout = awful.layout.suit.tile
+      awful.spawn(terminal)
+    end,
+    {description = "set tag as 🖥️", group = "dynamic tagging"}
+  ),
+  awful.key(
+    {modkey},
     "#" .. 7 + 9,
     function()
       local tag = awful.screen.focused().selected_tag
       tag.name = "🍺"
       tag.layout = awful.layout.suit.tile
       tag.master_fill_policy = "master_width_factor"
-      tag.master_width_factor = 0.7
+      tag.master_width_factor = 0.6
 
       -- os.execute permits here to open clients in the right order
       -- FIXME: performance (using awful.spawn ?)
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/chrome-com.desktop")
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/twitter.desktop")
-      os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/google-messages.desktop")
+      os.execute("dex " .. "/usr/share/applications/slack.desktop")
     end,
     {description = "set tag as 🍺", group = "dynamic tagging"}
   ),
