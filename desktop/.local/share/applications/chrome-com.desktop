@@ -4,5 +4,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Com
-Exec=/opt/google/chrome-unstable/google-chrome-unstable --new-window https://messages.google.com/web/conversations https://mail.google.com/mail/u/0/ https://mail.google.com/mail/u/2/ https://calendar.google.com/calendar/b/0/ https://github.com/notifications https://www.linkedin.com/feed/ https://www.facebook.com/messages/
+Exec=/opt/google/chrome-unstable/google-chrome-unstable --new-window https://messages.google.com/web/conversations https://mail.google.com/mail/u/0/ https://mail.google.com/mail/u/1/ https://calendar.google.com/calendar/b/0/ https://github.com/notifications https://www.linkedin.com/feed/ https://www.facebook.com/messages/
 Icon=google-chrome-unstable
