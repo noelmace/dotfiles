@@ -12,7 +12,7 @@ screen.connect_signal(
       if type(wallpaper) == "function" then
         wallpaper = wallpaper(s)
       end
-      gears.wallpaper.tiled(wallpaper, s, true)
+      gears.wallpaper.tiled(wallpaper, s)
     end
   end
 )
