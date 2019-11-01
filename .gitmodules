@@ -49,3 +49,6 @@
 [submodule "aur/slack-desktop"]
 	path = aur/slack-desktop
 	url = https://aur.archlinux.org/slack-desktop.git
+[submodule "aur/firefox-nightly"]
+	path = aur/firefox-nightly
+	url = https://aur.archlinux.org/firefox-nightly.git
