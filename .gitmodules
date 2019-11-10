@@ -52,3 +52,6 @@
 [submodule "aur/firefox-nightly"]
 	path = aur/firefox-nightly
 	url = https://aur.archlinux.org/firefox-nightly.git
+[submodule "aur/scrcpy"]
+	path = aur/scrcpy
+	url = https://aur.archlinux.org/scrcpy.git
