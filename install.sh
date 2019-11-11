@@ -52,6 +52,7 @@ stow hyper.js
 stow vsconf
 stow zsh
 stow arandr
+stow nvm
 
 ## Tools
 

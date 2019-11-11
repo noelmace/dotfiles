@@ -31,3 +31,6 @@
 [submodule "awesome/.config/awesome/jsonlua"]
 	path = awesome/.config/awesome/jsonlua
 	url = git@github.com:rxi/json.lua.git
+[submodule "nvm/.nvm"]
+	path = nvm/.nvm
+	url = git@github.com:nvm-sh/nvm.git
