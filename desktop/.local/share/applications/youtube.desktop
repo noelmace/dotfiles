@@ -4,6 +4,6 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=YouTube
-Exec=/opt/google/chrome-unstable/google-chrome-unstable --profile-directory=Default --app-id=blpcfgokakmgnkcojhhkbfbldkacnbeo
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=blpcfgokakmgnkcojhhkbfbldkacnbeo
 Icon=chrome-blpcfgokakmgnkcojhhkbfbldkacnbeo-Default
 StartupWMClass=crx_blpcfgokakmgnkcojhhkbfbldkacnbeo

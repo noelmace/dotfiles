@@ -1,7 +1,7 @@
 {
   "default": {
     "terminal": "hyper",
-    "browser": "google-chrome-unstable",
+    "browser": "google-chrome-stable",
     "guieditor": "code",
     "scrlocker": "physlock",
     "editor": "vim"

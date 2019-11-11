@@ -4,6 +4,6 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=Twitter
-Exec=/opt/google/chrome-unstable/google-chrome-unstable --profile-directory=Default --app-id=jgeocpdicgmkeemopbanhokmhcgcflmi
+Exec=/opt/google/chrome/google-chrome --profile-directory=Default --app-id=jgeocpdicgmkeemopbanhokmhcgcflmi
 Icon=chrome-jgeocpdicgmkeemopbanhokmhcgcflmi-Default
 StartupWMClass=crx_jgeocpdicgmkeemopbanhokmhcgcflmi

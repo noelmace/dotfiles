@@ -2,9 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #Locales
-export LANGUAGE=fr_FR.UTF-8
-export LANG=fr_FR.UTF-8
-export LC_ALL=fr_FR.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/noel/.oh-my-zsh"
@@ -223,7 +223,7 @@ else
 fi
 
 DEBUG_NODE="node --max_old_space_size=8192 --inspect-brk"
-alias chrome="google-chrome-unstable"
+alias chrome="google-chrome-stable"
 alias dnode="$DEBUG_NODE"
 alias dngg="$DEBUG_NODE $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
