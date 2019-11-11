@@ -22,8 +22,14 @@ sudo pacman -S lightdm lightdm-gtk-greeter
 # Bluetooth (bluetoothctl)
 sudo pacman -S bluez bluez-utils
 
+# NVM git install
+stow nvm
+cd nvm
+. nvm.sh
+cd ..
+
 # don't install yarn with pacman as it would install nodejs
-curl -o- -L https://yarnpkg.com/install.sh | bash
+sudo pacman -S yarn hyper --assume-installed nodejs=12.3.0
 
 # install vs code extensions
 cat code-extensions.list | xargs -L 1 echo code --install-extension

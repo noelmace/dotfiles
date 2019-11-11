@@ -6,8 +6,9 @@ A bunch of dotfiles and some other stuff I use. That it.
 
 ```
 cd ~
-git clone https://github.com/noelmace/dotfiles.git
+git clone --recurse-submodules -j8 https://github.com/noelmace/dotfiles.git
 cd dotfiles
+vim install.sh
 bash install.sh
 ```
 
