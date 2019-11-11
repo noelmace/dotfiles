@@ -10,9 +10,6 @@
 [submodule "zsh/.zsh-custom/plugins/zsh-autosuggestions"]
 	path = zsh/.zsh-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "aur/google-chrome-dev"]
-	path = aur/google-chrome-dev
-	url = https://aur.archlinux.org/google-chrome-dev.git
 [submodule "aur/all-repository-fonts"]
 	path = aur/all-repository-fonts
 	url = https://aur.archlinux.org/all-repository-fonts.git
@@ -31,27 +28,6 @@
 [submodule "awesome/.config/awesome/freedesktop"]
 	path = awesome/.config/awesome/freedesktop
 	url = git@github.com:lcpz/awesome-freedesktop.git
-[submodule "aur/lsdesktopf"]
-	path = aur/lsdesktopf
-	url = https://aur.archlinux.org/lsdesktopf.git
-[submodule "aur/vscode"]
-	path = aur/vscode
-	url = https://aur.archlinux.org/visual-studio-code-bin.git
 [submodule "awesome/.config/awesome/jsonlua"]
 	path = awesome/.config/awesome/jsonlua
 	url = git@github.com:rxi/json.lua.git
-[submodule "aur/google-chrome"]
-	path = aur/google-chrome
-	url = https://aur.archlinux.org/google-chrome.git
-[submodule "aur/v4l2loopback"]
-	path = aur/v4l2loopback
-	url = https://aur.archlinux.org/v4l2loopback-dkms.git
-[submodule "aur/slack-desktop"]
-	path = aur/slack-desktop
-	url = https://aur.archlinux.org/slack-desktop.git
-[submodule "aur/firefox-nightly"]
-	path = aur/firefox-nightly
-	url = https://aur.archlinux.org/firefox-nightly.git
-[submodule "aur/scrcpy"]
-	path = aur/scrcpy
-	url = https://aur.archlinux.org/scrcpy.git
