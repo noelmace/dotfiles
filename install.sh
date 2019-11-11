@@ -6,7 +6,7 @@ exit 1
 sudo pacman -Sy $(cat packages.dsv | cut -d' ' -f1)
 
 # X Window System
-sudo pacman -S awesome xbacklight xorg-xmodmap
+sudo pacman -S awesome xorg-xbacklight xorg-xmodmap
 # CLI utils
 sudo pacman -S xclip hub openssh vim sudo stow zsh autojump physlock
 # WiFi
