@@ -44,6 +44,10 @@ sudo ln -sf $PWD/etc/lightdm/lightdm.conf /etc/lightdm
 
 ## Services
 
+# disable Manjaro NetworkManager
+sudo systemctl disable --now NetworkManager.service
+sudo systemctl enable --now dhcpcd.service
+
 sudo systemctl enable netctl-auto@interface.service
 # enable a profile (in /etc/netctl/, maybe create with wifi-menu) to start at boot 
 # sudo netctl enable my-profile 
