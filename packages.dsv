@@ -27,6 +27,7 @@ crda 4.14-2
 cronie 1.5.4-3
 cryptsetup 2.2.1-1.1
 device-mapper 2.02.186-2
+dex 0.8.0-2
 dhclient 4.4.1-4
 dhcpcd 8.1.1-1
 dialog 1:1.3_20190808-1
@@ -227,6 +228,7 @@ xfce4-settings-gtk3 2019.08.15-1
 xfsprogs 5.2.1-1
 xorg-server 1.20.5-4.1
 xorg-xbacklight 1.2.3-1
+xorg-xev 1.2.3-1
 xorg-xinit 1.4.1-1
 xorg-xprop 1.2.4-1
 xterm 349-1
