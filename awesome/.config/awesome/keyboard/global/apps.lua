@@ -24,14 +24,14 @@ return tableCompat.join(
     end,
     {description = "run gui editor", group = "apps"}
   ),
-  -- Dropdown application
+  -- emoji-keyboard
   awful.key(
     {modkey},
     "z",
     function()
-      awful.screen.focused().quake:toggle()
+      awful.spawn.with_shell("emoji-keyboard -s")
     end,
-    {description = "dropdown application", group = "apps"}
+    {description = "emoji search", group = "apps"}
   ),
   -- screen capture GUI
   awful.key(

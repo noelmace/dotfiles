@@ -1,6 +1,8 @@
 local dpi = require("beautiful.xresources").apply_dpi
 local beautiful = require("beautiful")
 local wibox = require("wibox")
+local naughty = require("naughty")
+
 
 -- Signal function to execute when a new client appears.
 client.connect_signal(
@@ -14,6 +16,9 @@ client.connect_signal(
       -- Prevent clients from being unreachable after screen count changes.
       awful.placement.no_offscreen(c)
     end
+
+    -- DEBUG: show client class
+    naughty.notify({title=c.class})
   end
 )
 
@@ -102,3 +107,13 @@ client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
+
+client.disconnect_signal("request::geometry", awful.ewmh.client_geometry_requests)
+client.connect_signal("request::geometry", function(c, context, hints)
+    if c.class == "Emoji-keyboard" then
+        c:move_to_screen(awful.screen.focused())
+        hints = awful.placement.centered(c)
+        naughty.notify({title="waaa"})
+    end
+    awful.ewmh.client_geometry_requests(c, context, hints)
+end)

@@ -11,7 +11,7 @@ return tableCompat.join(
     {modkey},
     "r",
     function()
-      os.execute("rofi -combi-modi window,drun -show combi -modi combi")
+      os.execute("rofi -combi-modi window,drun -show combi -modi combi -show-icons")
     end,
     {description = "app launcher", group = "run"}
   ),
