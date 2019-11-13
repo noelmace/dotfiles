@@ -18,7 +18,7 @@ client.connect_signal(
     end
 
     -- DEBUG: show client class
-    naughty.notify({title=c.class})
+    -- naughty.notify({title=c.class})
   end
 )
 
@@ -113,7 +113,6 @@ client.connect_signal("request::geometry", function(c, context, hints)
     if c.class == "Emoji-keyboard" then
         c:move_to_screen(awful.screen.focused())
         hints = awful.placement.centered(c)
-        naughty.notify({title="waaa"})
     end
     awful.ewmh.client_geometry_requests(c, context, hints)
 end)
