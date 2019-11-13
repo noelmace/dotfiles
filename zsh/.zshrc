@@ -238,3 +238,5 @@ alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS 
     && ffmpeg -probesize 32 -analyzeduration 0 -listen 1 -i rtmp://127.0.0.1:1935/live/test -map 0:1 -f v4l2 -vcodec rawvideo /dev/video10 -map 0:0 -f alsa hw:10,1"
 alias fanq="sudo smbios-thermal-ctl --set-thermal-mode=Balanced"
 alias fanp="sudo smbios-thermal-ctl --set-thermal-mode=Performance"
+alias hibernate="systemctl hibernate"
+alias logout="sudo systemctl restart lightdm"
