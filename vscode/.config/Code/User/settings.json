@@ -86,7 +86,7 @@
     },
     {
       "name": "Something Different",
-      "value": "#832561"
+      "value": "#4d7d0a"
     },
     {
       "name": "Vue Green",
@@ -98,5 +98,10 @@
   },
   "cSpell.userWords": [
     "Installable"
-  ]
+  ],
+  "peacock.darkForegroundColor": "",
+  "peacock.lightForegroundColor": "",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#4d7d0a"
+  }
 }
