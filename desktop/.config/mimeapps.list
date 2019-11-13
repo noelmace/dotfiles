@@ -1,7 +1,4 @@
 [Added Associations]
-application/x-matroska=gnome-mplayer.desktop;
-video/mp4=org.gnome.Totem.desktop;
-image/png=gimp.desktop;
 
 [Default Applications]
 x-scheme-handler/ssh=Hyper.desktop
