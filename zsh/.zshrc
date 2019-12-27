@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #Locales
 export LANGUAGE=en_US.UTF-8
@@ -222,11 +222,17 @@ else
 	start_agent;
 fi
 
+# Debug Nodejs
+
 DEBUG_NODE="node --max_old_space_size=8192 --inspect-brk"
-alias chrome="google-chrome-stable"
+
 alias dnode="$DEBUG_NODE"
 alias dngg="$DEBUG_NODE $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
+
+# Aliases
+
+alias chrome="google-chrome-stable"
 alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
 alias npmp="npx install-peerdeps"
@@ -239,4 +245,5 @@ alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS 
 alias fanq="sudo smbios-thermal-ctl --set-thermal-mode=Balanced"
 alias fanp="sudo smbios-thermal-ctl --set-thermal-mode=Performance"
 alias hibernate="systemctl hibernate"
+alias suspend="systemctl suspend"
 alias logout="sudo systemctl restart lightdm"
