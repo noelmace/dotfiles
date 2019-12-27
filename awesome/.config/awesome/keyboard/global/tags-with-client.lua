@@ -24,7 +24,7 @@ return tableCompat.join(
       -- FIXME: performance (using awful.spawn ?)
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/chrome-com.desktop")
       os.execute("dex " .. os.getenv("HOME") .. "/.local/share/applications/twitter.desktop")
-      os.execute("dex " .. "/usr/share/applications/slack.desktop")
+      -- os.execute("dex " .. "/usr/share/applications/slack.desktop")
     end,
     {description = "set tag as 🍺", group = "dynamic tagging"}
   ),
