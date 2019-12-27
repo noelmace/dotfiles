@@ -32,6 +32,17 @@ export PATH="/home/noel/.luarocks/bin:$PATH"
 eval "$(hub alias -s)"
 GITHUB_USER="noelmace"
 
+# GCP
+
+# required by the gcloud zsh plugin
+CLOUDSDK_HOME=/home/noel/.gcp/google-cloud-sdk/
+
+# uncomment next lines if you don't want to use this plugin
+# updates PATH for the Google Cloud SDK.
+# if [ -f "$CLOUDSDK_HOME/path.zsh.inc" ]; then . "$CLOUDSDK_HOME/path.zsh.inc"; fi
+# enables shell command completion for gcloud.
+# if [ -f "$CLOUDSDK_HOME/completion.zsh.inc" ]; then . "$CLOUDSDK_HOME/completion.zsh.inc"; fi
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -83,6 +94,7 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  gcloud
   ng
   npm
   web-search
