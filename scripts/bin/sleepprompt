@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+
+echo "starting sleepprompt..."
+
+curTime=$(date +"%H:%M")
+theTime="5"
+unit="m"
+longUnit="minutes"
+
+msg="It's ${curTime}. Time to stop! System will be suspended in ${theTime} ${longUnit}."
+increasefactor=$(echo "${theTime}"/100|bc -l)
+
+echo "sending notification"
+notify-send "${msg}" -u critical --icon="$HOME/bin/assets/stop.png"
+
+echo "showing question prompt"
+
+(
+  counter=0
+  while [ "$counter" -le 100 ]; do
+    echo $counter;
+    sleep "${increasefactor}""${unit}"
+    counter=$(( $counter + 1 ))
+  done
+) | zenity --progress --text="${msg}" --percentage=0 --auto-close;
+
+if [ $? = 0 ];
+then
+  echo "suspending system"
+  systemctl suspend
+else
+  echo "suspend canceled"
+fi

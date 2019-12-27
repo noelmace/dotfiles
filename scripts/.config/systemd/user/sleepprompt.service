@@ -1,0 +1,6 @@
+[Unit]
+Description=System Sleep with prompt
+
+[Service]
+Type=oneshot
+ExecStart=/home/noel/bin/sleepprompt

@@ -1,0 +1,9 @@
+[Unit]
+Description=Prompt for system sleep every day at 21:30
+
+[Timer]
+# OnCalendar=monday-thursday,sunday 21:30
+OnCalendar=*-*-* 21:30
+
+[Install]
+WantedBy=timers.target

@@ -63,6 +63,12 @@ stow vsconf
 stow zsh
 stow arandr
 stow nvm
+stow scripts
+
+## user services
+
+systemctl --user enable sleepprompt
+systemctl --user enable sleepprompt.timer 
 
 ## Tools
 
