@@ -103,5 +103,8 @@
   "peacock.lightForegroundColor": "",
   "workbench.colorCustomizations": {
     "statusBar.background": "#4d7d0a"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
