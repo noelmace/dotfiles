@@ -38,7 +38,7 @@ GITHUB_USER="noelmace"
 # GCP
 
 # required by the gcloud zsh plugin
-CLOUDSDK_HOME=/home/noel/.gcp/google-cloud-sdk/
+CLOUDSDK_HOME=/opt/google-cloud-sdk
 
 # uncomment next lines if you don't want to use this plugin
 # updates PATH for the Google Cloud SDK.
