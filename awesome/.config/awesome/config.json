@@ -1,7 +1,7 @@
 {
   "default": {
-    "terminal": "hyper",
-    "browser": "google-chrome-stable",
+    "terminal": "terminator",
+    "browser": "firefox",
     "guieditor": "code",
     "scrlocker": "physlock",
     "editor": "vim"
