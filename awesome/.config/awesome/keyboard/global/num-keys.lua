@@ -3,10 +3,10 @@ local numKeys = {}
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 6 do
+for i = 1, 8 do
   -- Hack to only show tags 1 and 9 in the shortcut window (mod+s)
   local descr_view, descr_toggle, descr_move, descr_toggle_focus
-  if i == 1 or i == 6 then
+  if i == 1 or i == 8 then
     descr_view = {description = "view tag #", group = "tag"}
     descr_toggle = {description = "toggle tag #", group = "tag"}
     descr_move = {description = "move focused client to tag #", group = "tag"}
