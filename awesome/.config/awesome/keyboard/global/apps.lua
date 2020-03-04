@@ -46,5 +46,25 @@ return tableCompat.join(
       })
     end,
     {description = "screen recording", group = "apps"}
+  ),
+  -- Writing
+  awful.key(
+    {modkey},
+    "g",
+    function()
+      awful.spawn("ghostwriter")
+    end,
+    {description = "screen recording", group = "apps"}
+  ),
+  awful.key(
+    {modkey, "Shift"},
+    "#" .. 9 + 9,
+    function()
+      awful.spawn(browser)
+      awful.spawn(guieditor)
+      awful.spawn(terminal)
+      awful.spawn("ghostwriter")
+    end,
+    {description = "open all favorite apps", group = "apps"}
   )
 )
