@@ -3,7 +3,6 @@ local beautiful = require("beautiful")
 local wibox = require("wibox")
 local naughty = require("naughty")
 
-
 -- Signal function to execute when a new client appears.
 client.connect_signal(
   "manage",
@@ -18,7 +17,13 @@ client.connect_signal(
     end
 
     -- DEBUG: show client class
-    -- naughty.notify({title=c.class})
+    if userDebug then
+      naughty.notify({
+        title = "DEBUG: client connected",
+        text = "class: " .. c.class .. "\ninstance: " .. (c.instance or "nil") .. "\nrole: " .. (c.role or "nil"),
+        timeout = 20
+      })
+    end
   end
 )
 

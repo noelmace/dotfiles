@@ -22,6 +22,7 @@ config = json.load(os.getenv("HOME") .. "/.config/awesome/config.json")
 
 modkey = config.keys.mod
 altkey = config.keys.alt
+userDebug = config.debug
 
 terminal = config.default.terminal
 editor = os.getenv("EDITOR") or config.default.editor

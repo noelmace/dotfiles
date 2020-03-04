@@ -17,5 +17,6 @@
   "menu": {
     "mouseOnly": false
   },
-  "xdgAutostart": false
+  "xdgAutostart": false,
+  "debug": false
 }
