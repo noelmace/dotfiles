@@ -48,4 +48,14 @@ return {
     rule_any = {class = { "Slack", "Signal"} },
     properties = { tag = "💬"}
   },
+  -- floating clients
+  {
+    rule = {class = "firefox", role = "PictureInPicture"},
+    properties = {
+      floating = true,
+      placement = awful.placement.bottom_left,
+      titlebars_enabled = true,
+      tags = awful.screen.focused().tags
+    }
+  }
 }
