@@ -26,5 +26,26 @@ return {
   {
     rule = {class = "Gimp", role = "gimp-image-window"},
     properties = {maximized = true}
-  }
+  },
+  -- map clients to tag
+  {
+    rule_any = {class = {"firefox", "Google-chrome"} },
+    properties = { tag = "🔍"}
+  },
+  {
+    rule = {class = "Code"},
+    properties = { tag = "{}"}
+  },
+  {
+    rule_any = {class = {"ghostwriter", "Soffice"} },
+    properties = { tag = "📖"}
+  },
+  {
+    rule_any = {class = {"Terminator", "Hyper"} },
+    properties = { tag = "💻"}
+  },
+  {
+    rule_any = {class = { "Slack", "Signal"} },
+    properties = { tag = "💬"}
+  },
 }

@@ -14,7 +14,6 @@ local mpdControl = require("keyboard.global.mpd-control")
 local numKeys = require("keyboard.global.num-keys")
 local prompt = require("keyboard.global.prompt")
 local tagBrowsing = require("keyboard.global.tag-browsing")
-local tagsWithClient = require("keyboard.global.tags-with-client")
 local widgets = require("keyboard.global.widgets")
 
 return tableCompat.join(
@@ -29,6 +28,5 @@ return tableCompat.join(
   numKeys,
   prompt,
   tagBrowsing,
-  tagsWithClient,
   widgets
 )
