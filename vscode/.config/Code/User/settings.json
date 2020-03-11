@@ -106,5 +106,6 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "open-in-browser.default": "firefox"
 }
