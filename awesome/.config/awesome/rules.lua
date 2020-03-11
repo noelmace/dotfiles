@@ -37,7 +37,7 @@ return {
     properties = { tag = "{}"}
   },
   {
-    rule_any = {class = {"ghostwriter", "Soffice"} },
+    rule_any = {class = {"ghostwriter"} },
     properties = { tag = "📖"}
   },
   {

@@ -1,4 +1,5 @@
 local lain = require("lain")
+local naughty = require("naughty")
 
 return tableCompat.join(
   awful.key({modkey}, "Left", awful.tag.viewprev, {description = "view previous", group = "tag"}),
