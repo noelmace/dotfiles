@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -e
+
+audioDir="${HOME}/Audio"
+audioFileName=$(ls -t $audioDir | head -1)
+audioFile="${audioDir}/${audioFileName}"
+fileName="${audioFileName%.*}"
+minAudioFile="/tmp/${fileName}.min.flac"
+monoAudioFile="${HOME}/stt/${fileName}.flac"
+txtOutput="${HOME}/stt/${fileName}.txt"
+
+echo $audioFile
+
+read -p "Is this the right file? [y/N]" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  set +x
+  sox "$audioFile" "$minAudioFile" silence -l 1 0.1 1% -1 2.0 1%
+  ffmpeg -i "$minAudioFile" -ac 1 "$monoAudioFile"
+  gcloud ml speech recognize "$monoAudioFile" --language-code='en-US' --project="en-nlp" --format="value[delimiter='. '](results.alternatives[0].transcript)" > "$txtOutput"
+fi
