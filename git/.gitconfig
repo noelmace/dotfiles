@@ -40,9 +40,6 @@
 [diff]
   tool = default-difftool
 
-[diff "odf"]
-  textconv=odt2txt
-
 [difftool]
 	prompt = false
 
