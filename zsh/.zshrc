@@ -17,7 +17,10 @@ export ZSH_CUSTOM="$HOME/.zsh-custom"
 ZSH_THEME="spaceship"
 
 # Golang env
+[[ -s "/home/noel/.gvm/scripts/gvm" ]] && source "/home/noel/.gvm/scripts/gvm"
+
 export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
 # yarn

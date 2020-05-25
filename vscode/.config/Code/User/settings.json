@@ -144,5 +144,8 @@
   "editor.wordWrap": "on",
   "codesnap.backgroundColor": "#FFF",
   "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 30px",
-  "cSpell.language": "en,en-GB,en-US,fr,fr-FR"
+  "cSpell.language": "en,en-GB,en-US,fr,fr-FR",
+  "go.useLanguageServer": true,
+  "go.gopath": "/home/noel/go",
+  "go.inferGopath": false
 }
