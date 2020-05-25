@@ -261,6 +261,8 @@ alias fanp="sudo smbios-thermal-ctl --set-thermal-mode=Performance"
 alias hibernate="systemctl hibernate"
 alias suspend="systemctl suspend"
 alias logout="sudo systemctl restart lightdm"
+alias gpt="git push --follow-tags"
+alias npmI="npm install --package-lock-only --ignore-scripts"
 
 PATH="/home/noel/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/noel/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
