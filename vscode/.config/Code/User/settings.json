@@ -114,7 +114,27 @@
   "cSpell.userWords": [
     "COVID",
     "Datadog",
-    "MONOCLI"
+    "MONOCLI",
+    "Installable",
+    "Submodules",
+    "camelcase",
+    "codelab",
+    "deinit",
+    "devtools",
+    "gitkeep",
+    "gitmodules",
+    "monopm",
+    "npmlog",
+    "omnibox",
+    "postrelease",
+    "precache",
+    "promisify",
+    "rslt",
+    "submobule",
+    "submodule",
+    "subproject",
+    "subrepo",
+    "subtrees"
   ],
   "ltex.en-US.dictionary": [
     "lit-html",
@@ -123,5 +143,6 @@
   "codesnap.transparentBackground": true,
   "editor.wordWrap": "on",
   "codesnap.backgroundColor": "#FFF",
-  "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 30px"
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 30px",
+  "cSpell.language": "en,en-GB,en-US,fr,fr-FR"
 }
