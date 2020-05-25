@@ -95,6 +95,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   gcloud
+  docker
+  docker-compose
   ng
   npm
   web-search
