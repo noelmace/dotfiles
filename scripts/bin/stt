@@ -18,5 +18,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   set +x
   sox "$audioFile" "$minAudioFile" silence -l 1 0.1 1% -1 2.0 1%
   ffmpeg -i "$minAudioFile" -ac 1 "$monoAudioFile"
-  gcloud ml speech recognize "$monoAudioFile" --language-code='en-US' --project="en-nlp" --format="value[delimiter='. '](results.alternatives[0].transcript)" > "$txtOutput"
+  gsutil cp "$monoAudioFile" gs://tmp-speech/
+  # gcloud ml speech recognize "$monoAudioFile" --language-code='en-US' --project="en-nlp" --format="value[delimiter='. '](results.alternatives[0].transcript)" > "$txtOutput"
+  OPERACTION_ID=$(gcloud ml speech recognize-long-running \
+        "gs://test-speech/${fileName}.flac" \
+         --language-code='en-US' --async --format="value(name)" --project="en-nlp")
+  gcloud ml speech operations wait $OPERATION_ID
 fi
