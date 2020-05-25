@@ -96,9 +96,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.userWords": [
-    "Installable"
-  ],
   "peacock.darkForegroundColor": "",
   "peacock.lightForegroundColor": "",
   "workbench.colorCustomizations": {
@@ -107,5 +104,24 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "open-in-browser.default": "firefox"
+  "open-in-browser.default": "firefox",
+  "todo-tree.tree.showScanModeButton": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "ltex.additionalRules.motherTongue": "fr",
+  "cSpell.userWords": [
+    "COVID",
+    "Datadog",
+    "MONOCLI"
+  ],
+  "ltex.en-US.dictionary": [
+    "lit-html",
+    "open-wc"
+  ],
+  "codesnap.transparentBackground": true,
+  "editor.wordWrap": "on",
+  "codesnap.backgroundColor": "#FFF",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.55) 0px 10px 30px"
 }
