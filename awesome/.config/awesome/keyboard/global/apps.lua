@@ -24,14 +24,14 @@ return tableCompat.join(
     end,
     {description = "run gui editor", group = "apps"}
   ),
-  -- emoji-keyboard
+  -- zotero
   awful.key(
     {modkey},
     "z",
     function()
-      awful.spawn.with_shell("emoji-keyboard -s")
+      awful.spawn("zotero")
     end,
-    {description = "emoji search", group = "apps"}
+    {description = "zotero", group = "apps"}
   ),
   -- screen capture GUI
   awful.key(

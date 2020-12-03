@@ -48,6 +48,10 @@ return {
     rule_any = {class = { "Slack", "Signal"} },
     properties = { tag = "💬"}
   },
+  {
+    rule_any = {class = { "Zotero"} },
+    properties = { tag = "📖"}
+  },
   -- floating clients
   {
     rule = {class = "firefox", role = "PictureInPicture"},
