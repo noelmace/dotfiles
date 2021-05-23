@@ -170,6 +170,12 @@ if [[ -f $ZSH_ANGULAR_PROMPT ]]; then
   . $ZSH_ANGULAR_PROMPT;
 fi
 
+CMD_IMDONE=$HOME/.zshrc.d/commands/imdone.sh
+
+if [[ -f $CMD_IMDONE ]]; then
+  . $CMD_IMDONE;
+fi
+
 # spaceship
 
 SPACESHIP_PROMPT_ORDER=(
