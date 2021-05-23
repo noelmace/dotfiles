@@ -50,3 +50,5 @@
 	editor = code --wait
 	eol = lf
 	autocrlf = input
+[pull]
+	rebase = false
