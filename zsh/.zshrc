@@ -91,6 +91,13 @@ COMPLETION_WAITING_DOTS="true"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# NVM
+# before plugins for zsh-auto-nvm-use
+
+export NVM_DIR="$(realpath $HOME/.nvm)"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -109,6 +116,7 @@ plugins=(
   golang
   github
   zsh-autosuggestions
+  zsh-auto-nvm-use
 )
 
 SPACESHIP_EXIT_CODE_SHOW=true
@@ -155,12 +163,6 @@ zhelp() {
 }
 
 [ -s "/etc/profile.d/autojump.zsh" ] && source /etc/profile.d/autojump.zsh
-
-# NVM
-
-export NVM_DIR="$(realpath $HOME/.nvm)"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # .zshrc.d
 
