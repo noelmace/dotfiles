@@ -5,11 +5,14 @@ off
 output VIRTUAL1
 off
 output LVDS1
+crtc 1
 mode 1920x1080
 pos 0x0
 rate 59.93
+transform 0.799988,0.000000,0.000000,0.000000,0.799988,0.000000,0.000000,0.000000,1.000000
 output HDMI1
+crtc 0
 mode 1920x1080
-pos 1922x0
+pos 1920x0
 primary
 rate 60.00
